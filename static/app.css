@@ -1,0 +1,9 @@
+#result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+#guess-input:disabled,
+#guess-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

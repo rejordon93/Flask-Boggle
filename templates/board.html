@@ -1,0 +1,20 @@
+{% for row in board %}
+<div>
+  {% for letter in row %}
+  <span>{{ letter }}</span>
+  {% endfor %}
+</div>
+{% endfor %}
+
+<form method="POST" action="{{ url_for('check_guess') }}">
+  <label for="guess">Guess:</label>
+  <input type="text" name="guess" id="guess" required />
+  <input type="submit" value="Submit" />
+</form>
+
+<form id="guess-form">
+  <input type="text" id="guess-input" />
+  <button type="submit" id="guess-submit">Submit</button>
+</form>
+
+<div id="timer">60</div>
